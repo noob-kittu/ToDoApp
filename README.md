@@ -35,9 +35,9 @@ This is a simple web application built with Flask that allows users to manage th
    ```
 
 2. Navigate to the project directory
-  ```bash
-  cd to-do-list-web-app
-  ```
+   ```bash
+   cd to-do-list-web-app
+   ```
 
 3. Create a virtual environment:
    ```bash
