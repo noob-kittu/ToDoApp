@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, redirect, g
+from flask import Flask, request, render_template, redirect, g, url_for
 import sqlite3
 
 
@@ -78,15 +78,15 @@ def add_task():
     save_task_to_database(task)  # Implement this function
     return redirect('/')
 
-@app.route('/delete/<int:task_id>', methods=['GET'])
+@app.route('/delete/<int:task_id>', methods=['GET', 'POST'])
 def delete_task(task_id):
     # Delete the task from the database
     delete_task_from_database(task_id)  # Implement this function
     return redirect('/')
 
-@app.route('/update/<int:task_id>', methods=['POST'])
+@app.route('/update/<int:task_id>', methods=['GET', 'POST'])
 def update_task(task_id):
-    updated_task = request.form.get('task')
+    updated_task = request.form.get('updated_task')
     # Update the task in the database
     update_task_in_database(task_id, updated_task)  # Implement this function
     return redirect('/')
@@ -95,4 +95,5 @@ def update_task(task_id):
 if __name__ == '__main__':
     with app.app_context():
         init_db()
-    app.run()
+    app.run(debug=True)
+    
