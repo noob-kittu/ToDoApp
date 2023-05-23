@@ -32,28 +32,34 @@ This is a simple web application built with Flask that allows users to manage th
 1. Clone the repository:
    ```bash
    git clone <repository_url>
+   ```
 
 2. Navigate to the project directory
   ```bash
   cd to-do-list-web-app
+  ```
 
 3. Create a virtual environment:
    ```bash
    python -m venv venv
+   ```
 
 4. Activate the virtual environment:
    ```bash
    source venv/bin/activate
+   ```
 
 5. Install the required packages:
    ```bash
    pip install -r requirements.txt
+   ```
 
 
 ### Usage
 1. Run the Flask application:
    ```bash
    python app.py
+   ```
 2. Open your web browser and visit http://localhost:5000 to access the to-do list application.
 
 
